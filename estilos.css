@@ -14,12 +14,13 @@ body {
 }
 
 /* ===== HEADER ===== */
-header {
-  background-color: #000;
+/* ===== HEADER GENERAL ===== */
+.header {
+  background: #000;
+  padding: 10px 30px;
   position: sticky;
   top: 0;
-  z-index: 10;
-  padding: 10px 30px;
+  z-index: 1000;
 }
 
 .header-container {
@@ -28,23 +29,114 @@ header {
   align-items: center;
 }
 
-header h1 {
-  font-size: 1.5em;
+.logo {
   color: #ffcc00;
   margin: 0;
+  font-size: 1.4rem;
 }
 
-nav a {
+/* ===== SECCIÓN DERECHA ===== */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ===== BOTONES LOGIN Y REGISTRO ===== */
+.btn-auth {
+  padding: 7px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  background: #222;
+  color: #fff;
+  transition: 0.3s;
+  border: 1px solid #444;
+}
+
+.btn-auth:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+.register {
+  border-color: #ffcc00;
+}
+
+/* ===== ICONO HAMBURGUESA ANIMADO ===== */
+.menu-toggle {
+  width: 28px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+/* Animación cuando se activa */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===== SIDEBAR MENU ===== */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100vh;
+  background: #111;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 30px;
+  transition: 0.4s ease;
+  z-index: 2000;
+}
+
+.side-menu a {
   color: white;
   text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-  transition: 0.3s;
+  font-size: 1.2rem;
 }
 
-nav a:hover {
-  color: #ffcc00;
+.side-menu.open {
+  right: 0;
 }
+
+/* Overlay cuando abre el menú */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 1500;
+}
+
+.overlay.show {
+  display: block;
+}
+
+
+
+
 
 /* ===== SECCIONES ===== */
 section {

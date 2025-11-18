@@ -5,22 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santiago Herrera Fit</title>
     <link rel="stylesheet" href="estilos.css">
+    <script src="js/auth.js" defer></script>
+    <script src="js/menu.js"></script>
+    <script src="js/login.js" defer></script>
+
+
 </head>
 <body>
 
     <!-- ===== HEADER ===== -->
-    <header>
+    <header class="header">
         <div class="header-container">
-            <h1>🏋‍♂️ Santiago Herrera Fit</h1>
-            <nav>
-                <a href="#inicio">Inicio</a>
-                <a href="#sobre">Sobre mí</a>
-                <a href="#planes">Planes</a>
-                <a href="#testimonios">Testimonios</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
+
+            <!-- LOGO -->
+            <h1 class="logo">🏋️‍♂️ Santiago Herrera Fit</h1>
+
+            <!-- SECCIÓN DERECHA -->
+            <div class="right-section">
+
+                <!-- BOTONES LOGIN Y REGISTRO -->
+                <div class="auth-links">
+                    <a class="btn-auth" href="login.html">Iniciar sesión</a>
+                    <a class="btn-auth register" href="registro.html">Registrarse</a>
+                </div>
+
+                <!-- BOTÓN HAMBURGUESA -->
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
+
+        <!-- SIDEBAR MENU -->
+        <nav class="side-menu" id="sideMenu">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre">Sobre mí</a>
+            <a href="#planes">Planes</a>
+            <a href="#testimonios">Testimonios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <!-- OVERLAY OSCURO AL ABRIR MENU -->
+        <div class="overlay" id="overlay"></div>
     </header>
+
+
 
     <!-- ===== INICIO ===== -->
     <section id="inicio" class="seccion inicio">
