@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santiago Herrera Fit</title>
     <link rel="stylesheet" href="estilos.css">
-    <script src="js/auth.js" defer></script>
-    <script src="js/menu.js"></script>
-    <script src="js/login.js" defer></script>
-
+    <script src="auth.js" defer></script>
+    <script src="registro.js"></script>
+    <script src="menu.js"></script>
 
 </head>
 <body>
@@ -18,16 +17,25 @@
         <div class="header-container">
 
             <!-- LOGO -->
-            <h1 class="logo">🏋️‍♂️ Santiago Herrera Fit</h1>
+            <h1 class="logo">
+                🏋️‍♂️ Santiago Herrera Fit
+            </h1>
 
             <!-- SECCIÓN DERECHA -->
             <div class="right-section">
 
                 <!-- BOTONES LOGIN Y REGISTRO -->
-                <div class="auth-links">
+                <div class="auth-links" id="authLinks">
                     <a class="btn-auth" href="login.html">Iniciar sesión</a>
-                    <a class="btn-auth register" href="registro.html">Registrarse</a>
+                    <a class="btn-auth register" href="registrarse.html">Registrarse</a>
                 </div>
+
+                <!-- NUEVO CONTENEDOR QUE APARECE AL INICIAR SESIÓN -->
+                <div class="user-info" id="userInfo" style="display:none;">
+                    <span id="bienvenidoTexto" class="bienvenido"></span>
+                    <a class="btn-auth perfil" href="perfil.html">Perfil</a>
+                </div>
+
 
                 <!-- BOTÓN HAMBURGUESA -->
                 <div class="menu-toggle" id="menuToggle">

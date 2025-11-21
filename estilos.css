@@ -62,6 +62,30 @@ body {
 .register {
   border-color: #ffcc00;
 }
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bienvenido {
+    font-weight: bold;
+    color: #ff8800; /* naranja neon */
+    font-size: 1rem;
+}
+
+.perfil {
+    background-color: #ff8800;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.perfil:hover {
+    background-color: #ff5500;
+}
+
+
 
 /* ===== ICONO HAMBURGUESA ANIMADO ===== */
 .menu-toggle {
@@ -365,3 +389,4 @@ footer {
     padding: 15px;
     font-size: 0.9em;
 }
+
